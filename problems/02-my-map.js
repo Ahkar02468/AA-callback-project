@@ -16,10 +16,21 @@ let result2 = myMap(['run', 'Forrest'], function (el) {
 console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
-let myMap = function() {
-
+let myMap = function(arr, callback) {
+    let newArr = [];
+    for(let i = 0; i < arr.length; i++){
+        let result = arr[i];
+        newArr.push(callback(result));
+    }
+    return newArr;
 };
 
+let myCallback = function(arg){
+    return arg * 2;
+};
+
+let num  = [1,2,3,4];
+console.log(myMap(num,myCallback));
 
 
 

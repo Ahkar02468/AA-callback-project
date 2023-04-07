@@ -21,9 +21,17 @@ myForEach(['laika', 'belka'], function (el) {
 console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
 
-let myForEach = function() {
-
+let myForEach = function(arr, callback) {
+    for(let i = 0; i < arr.length; i++){
+        let char = arr[i];
+        callback(char);
+    }
 };
+let cbFunction = function(arg){
+    console.log(arg.toUpperCase() + "!!");
+}
+let newarr = ['a', 'b', 'c'];
+myForEach(newarr, cbFunction);
 
 
 
