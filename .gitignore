@@ -1,4 +1,4 @@
-# ignore ALL files in ANY directory named temp
+# ignore ALL files in ANY directory named following folders
 node_modules/
 package.json
 package-lock.json
